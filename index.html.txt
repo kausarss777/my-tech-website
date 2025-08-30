@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>गैजेट गुरु - नए मोबाइल और गैजेट्स की जानकारी</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .category-btn {
+            margin: 5px;
+            border-radius: 20px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--primary-color);
+        }
+        
+        .name-suggestions {
+            background-color: #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .name-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .name-list li {
+            padding: 10px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .name-list li:hover {
+            transform: translateX(5px);
+            background-color: #f8f9fa;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-mobile-alt me-2"></i>गैजेट गुरु
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">मोबाइल</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">गैजेट्स</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">रिव्यू</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">तुलना</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">नए मोबाइल और गैजेट्स की अपडेट</h1>
+            <p class="lead">सबसे पहले पाएं नवीनतम टेक्नोलॉजी की जानकारी, समीक्षाएं और तुलना</p>
+            <a href="#latest" class="btn btn-primary btn-lg mt-3">नवीनतम अपडेट देखें</a>
+        </div>
+    </section>
+
+    <!-- Website Name Suggestions -->
+    <section class="py-5">
+        <div class="container">
+            <div class="name-suggestions">
+                <h2 class="section-title">वेबसाइट नाम सुझाव</h2>
+                <p class="text-center mb-4">नीचे कुछ सुझाए गए नाम दिए गए हैं जो आपकी वेबसाइट के लिए उपयुक्त हो सकते हैं:</p>
+                <ul class="name-list">
+                    <li><i class="fas fa-lightbulb text-warning me-2"></i> <strong>गैजेट गुरु</strong> - आपकी टेक जानकारी का विशेषज्ञ</li>
+                    <li><i class="fas fa-lightbulb text-warning me-2"></i> <strong>मोबाइल मंत्र</strong> - स्मार्टफोन की पूरी जानकारी</li>
+                    <li><i class="fas fa-lightbulb text-warning me-2"></i> <strong>टेक समाचार</strong> - तकनीक की दुनिया से नवीनतम अपडेट</li>
+                    <li><i class="fas fa-lightbulb text-warning me-2"></i> <strong>गैजेट संसार</strong> - गैजेट्स की दुनिया में आपका मार्गदर्शक</li>
+                    <li><i class="fas fa-lightbulb text-warning me-2"></i> <strong>न्यू मोबाइल अपडेट</strong> - नए मोबाइलों की प्रथम समीक्षा</li>
+                    <li><i class="fas fa-lightbulb text-warning me-2"></i> <strong>टेक इनसाइडर</strong> - तकनीक की दुनिया के अंदरूनी समाचार</li>
+                </ul>
+                <div class="text-center mt-4">
+                    <p>क्या आपको इनमें से कोई नाम पसंद आया? या आप और सुझाव चाहते हैं?</p>
+                    <button class="btn btn-primary" id="moreNames">और नाम सुझाव देखें</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">श्रेणियाँ</h2>
+            <div class="d-flex flex-wrap justify-content-center">
+                <button class="btn btn-outline-primary category-btn">स्मार्टफोन</button>
+                <button class="btn btn-outline-primary category-btn">टैबलेट</button>
+                <button class="btn btn-outline-primary category-btn">लैपटॉप</button>
+                <button class="btn btn-outline-primary category-btn">स्मार्टवॉच</button>
+                <button class="btn btn-outline-primary category-btn">हेडफोन</button>
+                <button class="btn btn-outline-primary category-btn">एक्सेसरीज</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Gadgets -->
+    <section id="latest" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">नवीनतम गैजेट्स</h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=60" class="card-img-top" alt="Smartphone">
+                        <div class="card-body">
+                            <h5 class="card-title">iPhone 15 Pro</h5>
+                            <p class="card-text">नया A17 Pro चिप, टाइटेनियम डिजाइन और एडवांस्ड कैमरा सिस्टम</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹1,29,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=60" class="card-img-top" alt="Smart Watch">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy Watch 6</h5>
+                            <p class="card-text">एडवांस्ड हेल्थ मॉनिटरिंग, लंबी बैटरी लाइफ और स्टाइलिश डिजाइन</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹29,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=60" class="card-img-top" alt="Laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">MacBook Air M2</h5>
+                            <p class="card-text">अल्ट्रा-फास्ट M2 चिप, रेटिना डिस्प्ले और 18 घंटे की बैटरी लाइफ</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹1,14,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">नवीनतम अपडेट पाने के लिए सब्सक्राइब करें</h2>
+            <p class="mb-4">हमारे न्यूज़लेटर की सदस्यता लें और नए मोबाइल और गैजेट्स की जानकारी सबसे पहले प्राप्त करें</p>
+            <form class="row g-3 justify-content-center">
+                <div class="col-md-4">
+                    <input type="email" class="form-control form-control-lg" placeholder="आपका ईमेल पता">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-light btn-lg w-100">सब्सक्राइब</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>गैजेट गुरु के बारे में</h5>
+                    <p>हम नवीनतम मोबाइल और गैजेट्स की जानकारी, समीक्षाएं और तुलना प्रदान करते हैं।</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>जल्दी लिंक</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">होम</a></li>
+                        <li><a href="#" class="text-white">मोबाइल</a></li>
+                        <li><a href="#" class="text-white">गैजेट्स</a></li>
+                        <li><a href="#" class="text-white">संपर्क</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>हमसे जुड़ें</h5>
+                    <div class="d-flex justify-content-start">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <p class="text-center mb-0">© 2023 गैजेट गुरु. सभी अधिकार सुरक्षित</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Additional name suggestions
+        document.getElementById('moreNames').addEventListener('click', function() {
+            const additionalNames = [
+                "टेक टाइम्स - तकनीक की दुनिया की ताज़ा खबरें",
+                "गैजेट गैलरी - नवीनतम गैजेट्स का विशाल संग्रह",
+                "मोबाइल रिव्यू - स्मार्टफोन की विस्तृत समीक्षाएं",
+                "टेक वर्ल्ड - तकनीकी दुनिया में आपका गाइड",
+                "न्यू टेक इंडिया - भारत के लिए तकनीकी समीक्षाएं"
+            ];
+            
+            const nameList = document.querySelector('.name-list');
+            
+            additionalNames.forEach(name => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-lightbulb text-warning me-2"></i> <strong>${name.split(' - ')[0]}</strong> - ${name.split(' - ')[1]}`;
+                nameList.appendChild(li);
+            });
+            
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
