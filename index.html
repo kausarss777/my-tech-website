@@ -104,60 +104,6 @@
             color: var(--primary-color);
         }
         
-        .name-suggestions {
-            background-color: #e9ecef;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .name-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .name-list li {
-            padding: 12px 15px;
-            margin: 10px 0;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            align-items: center;
-        }
-        
-        .name-list li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            background-color: #f8f9fa;
-        }
-        
-        .availability {
-            margin-left: auto;
-            font-size: 0.85rem;
-            padding: 3px 10px;
-            border-radius: 15px;
-        }
-        
-        .available {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        
-        .taken {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        
-        .domain-checker {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        
         @media (max-width: 768px) {
             .hero-section h1 {
                 font-size: 2rem;
@@ -202,75 +148,6 @@
             <h1 class="display-4 fw-bold">नए मोबाइल और गैजेट्स की अपडेट</h1>
             <p class="lead">सबसे पहले पाएं नवीनतम टेक्नोलॉजी की जानकारी, समीक्षाएं और तुलना</p>
             <a href="#latest" class="btn btn-primary btn-lg mt-3">नवीनतम अपडेट देखें</a>
-        </div>
-    </section>
-
-    <!-- Domain Name Suggestions -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title">वेबसाइट के लिए डोमेन नाम सुझाव</h2>
-            <p class="text-center mb-4">नीचे कुछ सुझाए गए डोमेन नाम दिए गए हैं जो आपकी वेबसाइट के लिए उपयुक्त हो सकते हैं:</p>
-            
-            <div class="name-suggestions">
-                <ul class="name-list">
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>TechJanakar.com</strong> - आपकी टेक जानकारी का विशेषज्ञ
-                        <span class="availability available">उपलब्ध</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>MobileMantra.in</strong> - स्मार्टफोन की पूरी जानकारी
-                        <span class="availability available">उपलब्ध</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>GadgetGyan.com</strong> - गैजेट्स की दुनिया में आपका मार्गदर्शक
-                        <span class="availability available">उपलब्ध</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>NayaMobile.com</strong> - नए मोबाइलों की प्रथम समीक्षा
-                        <span class="availability available">उपलब्ध</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>TechSamancha.com</strong> - तकनीकी दुनिया का समांतर
-                        <span class="availability available">उपलब्ध</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>GadgetSansaar.in</strong> - गैजेट्स का सम्पूर्ण संसार
-                        <span class="availability available">उपलब्ध</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-lightbulb text-warning me-2"></i> 
-                        <strong>TechInsider.in</strong> - तकनीक की दुनिया के अंदरूनी समाचार
-                        <span class="availability taken">लिया गया</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Domain Checker -->
-            <div class="domain-checker">
-                <h3 class="mb-4">अपना डोमेन नाम चेक करें</h3>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg" placeholder="अपना डोमेन नाम दर्ज करें" id="domainInput">
-                    <select class="form-select form-select-lg" style="max-width: 120px;">
-                        <option>.com</option>
-                        <option>.in</option>
-                        <option>.net</option>
-                        <option>.org</option>
-                    </select>
-                    <button class="btn btn-primary" type="button" id="checkDomain">चेक करें</button>
-                </div>
-                <div id="domainResult" class="mt-3"></div>
-            </div>
-
-            <div class="text-center mt-4">
-                <p>क्या आपको इनमें से कोई नाम पसंद आया? या आप और सुझाव चाहते हैं?</p>
-                <button class="btn btn-primary" id="moreNames">और नाम सुझाव देखें</button>
-            </div>
         </div>
     </section>
 
@@ -339,6 +216,54 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- More Products -->
+            <div class="row mt-4">
+                <!-- Product 4 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=60" class="card-img-top" alt="Headphones">
+                        <div class="card-body">
+                            <h5 class="card-title">Sony WH-1000XM5</h5>
+                            <p class="card-text">बेस्ट नॉइस कैंसलिंग हेडफोन्स, 30 घंटे की बैटरी लाइफ</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹24,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=60" class="card-img-top" alt="Camera">
+                        <div class="card-body">
+                            <h5 class="card-title">Canon EOS R5</h5>
+                            <p class="card-text">8K वीडियो रिकॉर्डिंग, 45MP फुल-फ्रेम सेंसर</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹3,49,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=350&q=60" class="card-img-top" alt="Tablet">
+                        <div class="card-body">
+                            <h5 class="card-title">iPad Pro 12.9</h5>
+                            <p class="card-text">M2 चिप, Liquid Retina XDR डिस्प्ले, स्टाइलस सपोर्ट</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹1,19,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -391,51 +316,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Additional name suggestions
-        document.getElementById('moreNames').addEventListener('click', function() {
-            const additionalNames = [
-                {name: "TechDunia.com", desc: "तकनीकी दुनिया की पूरी जानकारी", status: "available"},
-                {name: "GadgetPedia.in", desc: "गैजेट्स की विश्वकोश", status: "available"},
-                {name: "MobileSathi.com", desc: "आपका मोबाइल सहयोगी", status: "available"},
-                {name: "Techyug.in", desc: "तकनीकी युग में आपका साथी", status: "available"},
-                {name: "GadgetKhoj.com", desc: "बेहतरीन गैजेट्स की खोज", status: "taken"}
-            ];
-            
-            const nameList = document.querySelector('.name-list');
-            
-            additionalNames.forEach(item => {
-                const li = document.createElement('li');
-                li.innerHTML = `
-                    <i class="fas fa-lightbulb text-warning me-2"></i> 
-                    <strong>${item.name}</strong> - ${item.desc}
-                    <span class="availability ${item.status}">${item.status === 'available' ? 'उपलब्ध' : 'लिया गया'}</span>
-                `;
-                nameList.appendChild(li);
-            });
-            
-            this.style.display = 'none';
-        });
-
-        // Domain checker functionality
-        document.getElementById('checkDomain').addEventListener('click', function() {
-            const domainInput = document.getElementById('domainInput').value;
-            const domainResult = document.getElementById('domainResult');
-            
-            if (!domainInput) {
-                domainResult.innerHTML = '<div class="alert alert-warning">कृपया एक डोमेन नाम दर्ज करें</div>';
-                return;
-            }
-            
-            // Simulate domain availability check
-            const isAvailable = Math.random() > 0.5;
-            
-            if (isAvailable) {
-                domainResult.innerHTML = `<div class="alert alert-success"><strong>${domainInput}.com</strong> उपलब्ध है! इसे अभी रजिस्टर करें।</div>`;
-            } else {
-                domainResult.innerHTML = `<div class="alert alert-danger"><strong>${domainInput}.com</strong> पहले से लिया जा चुका है। कृपया कोई अन्य नाम चुनें।</div>`;
-            }
-        });
-    </script>
 </body>
 </html>
