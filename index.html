@@ -104,6 +104,15 @@
             color: var(--primary-color);
         }
         
+        .product-detail {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
         @media (max-width: 768px) {
             .hero-section h1 {
                 font-size: 2rem;
@@ -123,7 +132,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <i class="fas fa-mobile-alt me-2"></i>टेक जानकार
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -131,12 +140,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">होम</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">मोबाइल</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">गैजेट्स</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">रिव्यू</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">तुलना</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">संपर्क</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mobile.html">मोबाइल</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gadgets.html">गैजेट्स</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">रिव्यू</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
                 </ul>
             </div>
         </div>
@@ -156,12 +164,12 @@
         <div class="container">
             <h2 class="section-title">श्रेणियाँ</h2>
             <div class="d-flex flex-wrap justify-content-center">
-                <button class="btn btn-outline-primary category-btn">स्मार्टफोन</button>
-                <button class="btn btn-outline-primary category-btn">टैबलेट</button>
-                <button class="btn btn-outline-primary category-btn">लैपटॉप</button>
-                <button class="btn btn-outline-primary category-btn">स्मार्टवॉच</button>
-                <button class="btn btn-outline-primary category-btn">हेडफोन</button>
-                <button class="btn btn-outline-primary category-btn">एक्सेसरीज</button>
+                <a href="mobile.html" class="btn btn-outline-primary category-btn">स्मार्टफोन</a>
+                <a href="tablets.html" class="btn btn-outline-primary category-btn">टैबलेट</a>
+                <a href="laptops.html" class="btn btn-outline-primary category-btn">लैपटॉप</a>
+                <a href="smartwatch.html" class="btn btn-outline-primary category-btn">स्मार्टवॉच</a>
+                <a href="headphones.html" class="btn btn-outline-primary category-btn">हेडफोन</a>
+                <a href="accessories.html" class="btn btn-outline-primary category-btn">एक्सेसरीज</a>
             </div>
         </div>
     </section>
@@ -180,7 +188,7 @@
                             <p class="card-text">नया A17 Pro चिप, टाइटेनियम डिजाइन और एडवांस्ड कैमरा सिस्टम</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-primary">₹1,29,999</span>
-                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showProductDetail('iphone15')">पूरी जानकारी</button>
                             </div>
                         </div>
                     </div>
@@ -195,7 +203,7 @@
                             <p class="card-text">एडवांस्ड हेल्थ मॉनिटरिंग, लंबी बैटरी लाइफ और स्टाइलिश डिजाइन</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-primary">₹29,999</span>
-                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showProductDetail('watch6')">पूरी जानकारी</button>
                             </div>
                         </div>
                     </div>
@@ -210,7 +218,7 @@
                             <p class="card-text">अल्ट्रा-फास्ट M2 चिप, रेटिना डिस्प्ले और 18 घंटे की बैटरी लाइफ</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-primary">₹1,14,999</span>
-                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showProductDetail('macbook')">पूरी जानकारी</button>
                             </div>
                         </div>
                     </div>
@@ -228,7 +236,7 @@
                             <p class="card-text">बेस्ट नॉइस कैंसलिंग हेडफोन्स, 30 घंटे की बैटरी लाइफ</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-primary">₹24,999</span>
-                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showProductDetail('sonyheadphones')">पूरी जानकारी</button>
                             </div>
                         </div>
                     </div>
@@ -243,7 +251,7 @@
                             <p class="card-text">8K वीडियो रिकॉर्डिंग, 45MP फुल-फ्रेम सेंसर</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-primary">₹3,49,999</span>
-                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showProductDetail('canon')">पूरी जानकारी</button>
                             </div>
                         </div>
                     </div>
@@ -258,12 +266,48 @@
                             <p class="card-text">M2 चिप, Liquid Retina XDR डिस्प्ले, स्टाइलस सपोर्ट</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-primary">₹1,19,999</span>
-                                <a href="#" class="btn btn-sm btn-outline-primary">पूरी जानकारी</a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showProductDetail('ipad')">पूरी जानकारी</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section class="py-5">
+        <div class="container">
+            <div id="iphone15" class="product-detail">
+                <h3>iPhone 15 Pro - पूरी जानकारी</h3>
+                <p>iPhone 15 Pro Apple का नवीनतम फ्लैगशिप स्मार्टफोन है जिसमें नया A17 Pro चिपसेट, टाइटेनियम डिजाइन और उन्नत कैमरा सिस्टम दिया गया है।</p>
+                <h5>मुख्य विशेषताएं:</h5>
+                <ul>
+                    <li>6.1-inch Super Retina XDR display</li>
+                    <li>A17 Pro chip with 6-core CPU</li>
+                    <li>Pro camera system (48MP Main, 12MP Ultra Wide, 12MP Telephoto)</li>
+                    <li>Titanium design with textured matte glass back</li>
+                    <li>USB-C connectivity</li>
+                    <li>iOS 17 with new features</li>
+                </ul>
+                <button class="btn btn-primary" onclick="hideProductDetail('iphone15')">वापस जाएं</button>
+            </div>
+            
+            <div id="watch6" class="product-detail">
+                <h3>Samsung Galaxy Watch 6 - पूरी जानकारी</h3>
+                <p>Samsung Galaxy Watch 6 एक उन्नत स्मार्टवॉच है जो हेल्थ मॉनिटरिंग और लंबी बैटरी लाइफ के साथ आती है।</p>
+                <h5>मुख्य विशेषताएं:</h5>
+                <ul>
+                    <li>1.5-inch Super AMOLED Display</li>
+                    <li>Advanced Health Monitoring (Heart Rate, ECG, Blood Pressure)</li>
+                    <li>40-hour battery life</li>
+                    <li>IP68 water resistance</li>
+                    <li>Wear OS with Samsung Experience</li>
+                </ul>
+                <button class="btn btn-primary" onclick="hideProductDetail('watch6')">वापस जाएं</button>
+            </div>
+            
+            <!-- Other product details would go here -->
         </div>
     </section>
 
@@ -294,19 +338,19 @@
                 <div class="col-md-4 mb-3">
                     <h5>जल्दी लिंक</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">होम</a></li>
-                        <li><a href="#" class="text-white">मोबाइल</a></li>
-                        <li><a href="#" class="text-white">गैजेट्स</a></li>
-                        <li><a href="#" class="text-white">संपर्क</a></li>
+                        <li><a href="index.html" class="text-white">होम</a></li>
+                        <li><a href="mobile.html" class="text-white">मोबाइल</a></li>
+                        <li><a href="gadgets.html" class="text-white">गैजेट्स</a></li>
+                        <li><a href="contact.html" class="text-white">संपर्क</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>हमसे जुड़ें</h5>
                     <div class="d-flex justify-content-start">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" class="social-icon"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -316,5 +360,39 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Product detail show/hide functions
+        function showProductDetail(productId) {
+            // Hide all product details first
+            document.querySelectorAll('.product-detail').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            
+            // Show the selected product detail
+            document.getElementById(productId).style.display = 'block';
+            
+            // Scroll to the product detail section
+            document.getElementById(productId).scrollIntoView({behavior: 'smooth'});
+        }
+        
+        function hideProductDetail(productId) {
+            document.getElementById(productId).style.display = 'none';
+            
+            // Scroll back to the products section
+            document.getElementById('latest').scrollIntoView({behavior: 'smooth'});
+        }
+        
+        // Simple form validation for newsletter
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email && email.includes('@')) {
+                alert('धन्यवाद! आपने सफलतापूर्वक सब्सक्राइब किया है।');
+                this.reset();
+            } else {
+                alert('कृपया एक वैध ईमेल एड्रेस डालें।');
+            }
+        });
+    </script>
 </body>
 </html>
